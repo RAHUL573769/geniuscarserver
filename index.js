@@ -17,12 +17,9 @@ const client = new MongoClient(uri, {
   useUnifiedTopology: true,
   serverApi: ServerApiVersion.v1,
 });
-client.connect((err) => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
 
+async function run() {}
+run().catch(console.dir);
 app.get("/", (req, res) => {
   res.send("Hi From genuise Car");
 });
